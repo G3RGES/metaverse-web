@@ -1,8 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
+//components
+import Navbar from "./Components/Navbar";
+
 const App = () => {
-  return <div className="bg-red-500">App</div>;
+  return (
+    <main className="overflow-x-hidden">
+      <Navbar />
+    </main>
+  );
 };
 
 export default App;
