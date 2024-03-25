@@ -8,7 +8,7 @@ import Logo from "../assets/logo.png";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 
 // components
-// import DarkMode from "./DarkMode";
+import DarkMode from "./DarkMode";
 
 const NavLinks = [
   {
@@ -38,7 +38,7 @@ const Navbar = () => {
   const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <div>
+    <div className="relative z-[9999] text-black dark:text-white duration-300">
       <div className="container py-2 md:py-0">
         <div className="flex justify-between items-center">
           {/* logo section */}
@@ -50,9 +50,6 @@ const Navbar = () => {
           </div>
 
           {/* desktop menu section */}
-
-          {/* mobile view */}
-
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
               {NavLinks.map(({ id, name, link }) => (
@@ -66,24 +63,30 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+
+              {/* dark mode */}
+              <DarkMode />
             </ul>
           </nav>
 
           {/* mobile view */}
-          <div className="">
-            {showMenu ? (
-              <HiMenuAlt1
-                onClick={toggleMenu}
-                className="cursor-pointer"
-                size={30}
-              />
-            ) : (
-              <HiMenuAlt3
-                onClick={toggleMenu}
-                className="cursor-pointer"
-                size={30}
-              />
-            )}
+          <div className="md:hidden block">
+            <div className="flex items-center gap-4">
+              <DarkMode />
+              {showMenu ? (
+                <HiMenuAlt1
+                  onClick={toggleMenu}
+                  className="cursor-pointer"
+                  size={30}
+                />
+              ) : (
+                <HiMenuAlt3
+                  onClick={toggleMenu}
+                  className="cursor-pointer"
+                  size={30}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
