@@ -6,6 +6,7 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import Quotes from "./Components/Quotes";
 import Banner from "./Components/Banner";
+import Banner2 from "./Components/Banner2";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Hero />
       <Quotes />
       <Banner />
+      <Banner2 />
     </main>
   );
 };
