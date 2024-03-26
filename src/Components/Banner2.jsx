@@ -13,7 +13,7 @@ const Banner2 = () => {
       <div className="container min-h-[620px] flex items-center ">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center ">
           {/* text section */}
-          <div className="lg:pr-20 relative">
+          <div className="order-2 sm:order-1 lg:pr-20 relative">
             <div className="relative z-10 space-y-5">
               <h1 className="text-4xl font-semibold ">
                 GET READY TO ENJ0Y VR{" "}
@@ -49,7 +49,7 @@ const Banner2 = () => {
           </div>
 
           {/* image section */}
-          <div>
+          <div className="order-1 sm:order-2">
             <img
               className=" w-full max-w-[400px] "
               src={BannerPng}
