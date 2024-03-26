@@ -23,7 +23,7 @@ const App = () => {
       <Banner />
       <Banner2 />
       <Features />
-      {/* <AppStore /> */}
+      <AppStore />
       {/* <Footer /> */}
     </main>
   );
