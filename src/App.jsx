@@ -24,7 +24,7 @@ const App = () => {
       <Banner2 />
       <Features />
       <AppStore />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 };
