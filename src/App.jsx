@@ -9,6 +9,7 @@ import Banner from "./Components/Banner";
 import Banner2 from "./Components/Banner2";
 import Features from "./Components/Features";
 import AppStore from "./Components/AppStore";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
       <Banner />
       <Banner2 />
       <Features />
-      <AppStore />
+      {/* <AppStore /> */}
+      {/* <Footer /> */}
     </main>
   );
 };
