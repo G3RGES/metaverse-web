@@ -7,6 +7,8 @@ import Navbar from "./Components/Navbar";
 import Quotes from "./Components/Quotes";
 import Banner from "./Components/Banner";
 import Banner2 from "./Components/Banner2";
+import Features from "./Components/Features";
+import AppStore from "./Components/AppStore";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
       <Quotes />
       <Banner />
       <Banner2 />
+      <Features />
+      <AppStore />
     </main>
   );
 };
