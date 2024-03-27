@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //components
 import Hero from "./Components/Hero";
@@ -13,6 +13,8 @@ import Footer from "./Components/Footer";
 import PopupPlayer from "./Components/PopupPlayer";
 
 //aos
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,6 +22,16 @@ const App = () => {
   const togglePlay = () => {
     setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <main
