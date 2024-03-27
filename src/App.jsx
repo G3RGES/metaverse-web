@@ -10,6 +10,9 @@ import Banner2 from "./Components/Banner2";
 import Features from "./Components/Features";
 import AppStore from "./Components/AppStore";
 import Footer from "./Components/Footer";
+import PopupPlayer from "./Components/PopupPlayer";
+
+//aos
 
 const App = () => {
   return (
@@ -25,6 +28,9 @@ const App = () => {
       <Features />
       <AppStore />
       <Footer />
+
+      {/* video player */}
+      <PopupPlayer />
     </main>
   );
 };
