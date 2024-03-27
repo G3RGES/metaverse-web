@@ -1,8 +1,86 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
+// icons
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaLocationArrow,
+  FaMobileAlt,
+} from "react-icons/fa";
+
+const FooterLinks = [
+  { id: 1, title: "Home", link: "/#" },
+  {
+    id: 2,
+    title: "About",
+    link: "/#about",
+  },
+  {
+    id: 3,
+    title: "Contact",
+    link: "/#contact",
+  },
+  {
+    id: 4,
+    title: "Blog",
+    link: "/#blog",
+  },
+];
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <>
+      <div className="bg-gray-100 dark:bg-dark mt-14 rounded-t-3xl">
+        <div className="container">
+          <div className="grid md:grid-cols-3 py-4">
+            {/* company details */}
+            <div className="py-8 px-4">
+              <h1
+                className="sm:text-3xl text-xl font-bold sm:text-left 
+              text-justify mb-3 flex items-center gap-3"
+              >
+                Metaverse
+              </h1>
+              <p className="text-sm">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat dolor illum a aut iste expedita.
+              </p>
+              <br />
+
+              {/* contact section */}
+              <div>
+                <div className="flex items-center gap-3">
+                  <FaLocationArrow />
+                  <p>Sohag, Egypt</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FaMobileAlt />
+                  <p>+20 1203346582</p>
+                </div>
+              </div>
+
+              {/* social handle */}
+              <div className="flex items-center gap-3 mt-6">
+                <a href="https://www.facebook.com/gergesnashaat95">
+                  <FaFacebook className="text-3xl hover:text-primary duration-300" />
+                </a>
+                <a href="https://www.instagram.com/gergesnashaat/">
+                  <FaInstagram className="text-3xl hover:text-primary duration-300" />
+                </a>
+                <a href="https://www.linkedin.com/in/gergesnashaat/">
+                  <FaLinkedin className="text-3xl hover:text-primary duration-300" />
+                </a>
+              </div>
+            </div>
+
+            {/* footer links */}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Footer;
