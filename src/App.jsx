@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 
 //components
 import Hero from "./Components/Hero";
@@ -15,22 +15,28 @@ import PopupPlayer from "./Components/PopupPlayer";
 //aos
 
 const App = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <main
       className="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white
     duration-300"
     >
       <Navbar />
-      <Hero />
+      <Hero togglePlay={togglePlay} />
       <Quotes />
-      <Banner />
-      <Banner2 />
+      <Banner togglePlay={togglePlay} />
+      <Banner2 togglePlay={togglePlay} />
       <Features />
       <AppStore />
       <Footer />
 
       {/* video player */}
-      <PopupPlayer />
+      <PopupPlayer isPlaying={isPlaying} togglePlay={togglePlay} />
     </main>
   );
 };
