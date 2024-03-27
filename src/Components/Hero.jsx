@@ -21,7 +21,7 @@ const Hero = ({ togglePlay }) => {
           >
             {/* hero text section */}
             <div className="space-y-5 lg:pr-20 order-2 sm:order-1">
-              <h1 className="text-4xl font-semibold ">
+              <h1 data-aos="fade-right" className="text-4xl font-semibold ">
                 GET READY TO ENJ0Y VR{" "}
                 <span
                   className="bg-clip-text text-transparent bg-gradient-to-l from-primary
@@ -38,8 +38,16 @@ const Hero = ({ togglePlay }) => {
               </p>
 
               <div className="flex gap-6">
-                <button className="primary-btn">Get Started</button>
                 <button
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  className="primary-btn"
+                >
+                  Get Started
+                </button>
+                <button
+                  data-aos="fade-up"
+                  data-aos-delay="700"
                   onClick={togglePlay}
                   className="flex items-center gap-2"
                 >
@@ -50,7 +58,11 @@ const Hero = ({ togglePlay }) => {
             </div>
 
             {/* image section */}
-            <div className="order-1 sm:order-2">
+            <div
+              data-aos="fade-left"
+              data-aos-offset="0"
+              className="order-1 sm:order-2"
+            >
               <img className="max-h-[600px] " src={HeroPng} alt="hero_image" />
             </div>
           </div>
