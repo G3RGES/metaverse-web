@@ -15,7 +15,11 @@ const Banner2 = ({ togglePlay }) => {
           {/* text section */}
           <div className="order-2 sm:order-1 lg:pr-20 relative">
             <div className="relative z-10 space-y-5">
-              <h1 className="text-4xl font-semibold ">
+              <h1
+                data-aos="fade-right"
+                data-aos-delay="300"
+                className="text-4xl font-semibold "
+              >
                 GET READY TO ENJ0Y VR{" "}
                 <span
                   className="bg-clip-text text-transparent bg-gradient-to-l from-primary
@@ -32,8 +36,16 @@ const Banner2 = ({ togglePlay }) => {
               </p>
 
               <div className="flex gap-6">
-                <button className="primary-btn">Get Started</button>
                 <button
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                  className="primary-btn"
+                >
+                  Get Started
+                </button>
+                <button
+                  data-aos="fade-up"
+                  data-aos-delay="900"
                   onClick={togglePlay}
                   className="flex items-center gap-2"
                 >
@@ -52,7 +64,7 @@ const Banner2 = ({ togglePlay }) => {
           </div>
 
           {/* image section */}
-          <div className="order-1 sm:order-2">
+          <div data-aos="fade-left" className="order-1 sm:order-2">
             <img
               className=" w-full max-w-[400px] "
               src={BannerPng}
