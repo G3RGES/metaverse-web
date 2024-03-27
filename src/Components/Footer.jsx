@@ -76,6 +76,62 @@ const Footer = () => {
             </div>
 
             {/* footer links */}
+            <div
+              className="grid grid-cols-2 sm:grid-cols-3 
+            col-span-2 md:pl-10"
+            >
+              <div className="">
+                <div className="py-8 px-4">
+                  <h1 className="text-xl font-bold mb-3">Quick Links</h1>
+                  <ul className="space-y-3">
+                    {FooterLinks.map(({ id, title, link }) => (
+                      <li
+                        className="hover:translate-x-1 duration-300 "
+                        key={id}
+                      >
+                        <a className="hover:text-primary" href={link}>
+                          {title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="">
+                <div className="py-8 px-4">
+                  <h1 className="text-xl font-bold mb-3">Quick Links</h1>
+                  <ul className="space-y-3">
+                    {FooterLinks.map(({ id, title, link }) => (
+                      <li
+                        className="hover:translate-x-1 duration-300 "
+                        key={id}
+                      >
+                        <a className="hover:text-primary" href={link}>
+                          {title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="">
+                <div className="py-8 px-4">
+                  <h1 className="text-xl font-bold mb-3">Quick Links</h1>
+                  <ul className="space-y-3">
+                    {FooterLinks.map(({ id, title, link }) => (
+                      <li
+                        className="hover:translate-x-1 duration-300 "
+                        key={id}
+                      >
+                        <a className="hover:text-primary" href={link}>
+                          {title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
